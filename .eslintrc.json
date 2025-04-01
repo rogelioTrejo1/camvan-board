@@ -1,0 +1,33 @@
+{
+  "root": true,
+  "extends": [
+    "semistandard",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": [
+      "./tsconfig.json",
+      "./tsconfig.client.json",
+      "./tsconfig.server.json"
+    ]
+  },
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "ignorePatterns": [
+    "public/**/*",
+    "views/**/*",
+    "node_modules",
+    "dist",
+    "esbuild.config.ts",
+    "post.build.ts"
+  ],
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "off",
+    "no-return-assign": "off",
+    "no-use-before-define": "off",
+    "no-new": "off"
+  }
+}

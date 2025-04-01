@@ -1,0 +1,23 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./src/server",
+    "module": "CommonJS",
+    "target": "ES2024",
+    "rootDir": "./src/server",
+    "outDir": "./dist",
+    "noEmit": false,
+    "allowImportingTsExtensions": false,
+    "paths": {
+      "@config/*": [
+        "./src/server/config/*"
+      ],
+      "@Schemas/*": [
+        "./src/server/schemas/*"
+      ]
+    }
+  },
+  "include": [
+    "./src/server/**/*"
+  ],
+}

@@ -1,0 +1,9 @@
+.vscode
+node_modules
+
+pnpm-lock.yaml
+
+*.env
+
+public/assets
+dist
