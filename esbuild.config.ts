@@ -41,6 +41,9 @@ const esbuildConfig: SameShape<BuildOptions, BuildOptions> = {
     '.eot': 'file',
     '.svg': 'file'
   },
+  define: {
+    'process.env.NODE_ENV': JSON.stringify(NODE_ENV),
+  }
 };
 
 const wss = new WebSocketServer({ port: 35729 });

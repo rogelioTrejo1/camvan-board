@@ -15,16 +15,6 @@
 
 <body>
   {{body}}
-
-  <script>
-    const socket = new WebSocket("ws://localhost:35729");
-    socket.addEventListener("message", (event) => {
-      if (event.data === "reload") {
-        console.log("🔄 Recargando página...");
-        location.reload();
-      }
-    });
-  </script>
 </body>
 
 </html>

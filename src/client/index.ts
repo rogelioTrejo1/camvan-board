@@ -4,6 +4,10 @@ import './styles/app.css';
 // Routes
 import ROUTES from './routes';
 
+// Config
+import { NODE_ENV } from './config/keys.config';
+
+
 // Variables
 const CURRENT_PATH = location.pathname;
 
@@ -18,6 +22,9 @@ const CURRENT_PATH = location.pathname;
       const [modulo] = await Promise.all([
         ROUTES[machedRoute]()
       ]);
+
+      // Importación del modulo de desarrollo
+      if (NODE_ENV === 'dev') await import('./socket');
 
       modulo.main();
   } catch (error) {
